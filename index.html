@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /*/*css reset*/
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: IRANSansMedium;
+            src: url('fonts/persion/IRANSans-Medium-web.eot');
+            src: url('fonts/persion/IRANSans-Medium-web.ttf');
+            src: url('fonts/persion/IRANSans-Medium-web.woff');
+            src: url('fonts/persion/IRANSans-Medium-web.woff2');
+        }
+
+        @font-face {
+            font-family: IRANSans;
+            src: url('fonts/persion/IRANSans-web.eot');
+            src: url('fonts/persion/IRANSans-web.ttf');
+            src: url('fonts/persion/IRANSans-web.woff');
+            src: url('fonts/persion/IRANSans-web.woff2');
+        }
+
+        body {
+            background: #fff;
+            direction: rtl;
+            font-family: IRANSans;
+        }
+
+        .app {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .card-item-wrapper {
+            width: 300px;
+            min-height: 300px;
+            color: white;
+            margin: 10px;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        .cart-front ,
+        .cart-back {
+            position: absolute;
+            top: 0;
+            right : 0;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            border-radius: 15px;
+        }
+        .cart-front {
+            z-index: 2;
+        }
+        .cart-front.remove {
+            opacity: 0;
+            visibility: hidden;
+            transform: rotate(360deg);
+            transition: all 2s ease;
+        }
+        .cart-back {
+            z-index: 1;
+            padding: 15px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .cart-back.show {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 2s ease;
+        }
+        .card-number {
+            position: absolute;
+            transform: translate(-50% , -50%);
+            left: 50%;
+            top: 50%;
+            font-size: 70px;
+        }
+        .card-desc {
+            font-size: 14px;
+            line-height: 25px;        
+        }
+        .card-title {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        .title-desc-wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+        }
+        .card-front-0 ,
+        .card-back-0 {
+            background: #93547D;
+        }
+        .card-front-1 ,
+        .card-back-1 {
+            background: #E20786;
+        }
+        .card-front-2 ,
+        .card-back-2 {
+            background: #814BD7;
+        }
+        .card-front-3 ,
+        .card-back-3 {
+            background: #2F5015;
+        }
+        .card-front-4 ,
+        .card-back-4 {
+            background: #3A0829;
+        }
+        .card-front-5 ,
+        .card-back-5 {
+            background: #FB876B;
+        }
+    </style>
+    <div id="app" class="app"></div>
+
+    <script src="src/index.js"></script>
+    <script src="src/ui.js"></script>
+</body>
+</html>
